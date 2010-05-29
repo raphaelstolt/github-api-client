@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Determine the root directory of the framework component.
  */
 $componentPath = realpath(dirname(dirname(__FILE__)));
