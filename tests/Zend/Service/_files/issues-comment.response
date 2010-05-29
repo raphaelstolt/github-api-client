@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Thu, 11 Feb 2010 15:43:40 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "c76ab860befd13977ea833c46b473822"
+X-runtime: 30ms
+Content-length: 58
+Set-cookie: _github_ses=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--884981fc5aa85daf318eeff084d98e2cff92
+578f; path=/; expires=Wed, 01 Jan 2020 08:00:00 GMT; HttpOnly
+Cache-control: private, max-age=0, must-revalidate
+
+{"comment":{"gravatar_id":"c8ab0c547708314df9c5bbc15038784d","created_at":"2010\/05\/29 15:18:16 -0700","body":"A test comment.","updated_at":"2010\/05\/29 15:18:16 -0700","id":257870,"user":"zfghclient"}}

@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Tue, 09 Feb 2010 17:34:52 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "c09756b46a120e7c8e68ede0f566ec3e"
+X-runtime: 17ms
+Content-length: 20
+Cache-control: private, max-age=0, must-revalidate
+
+{"status":"deleted"}

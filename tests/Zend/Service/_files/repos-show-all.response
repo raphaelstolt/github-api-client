@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Tue, 09 Feb 2010 14:28:51 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "38672f716e5aa4bbec2e880c71ce3e4f"
+X-runtime: 13ms
+Content-length: 894
+Set-cookie: _github_ses=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--884981fc5aa85daf318eeff084d98e2cff92578f; path
+=/; expires=Wed, 01 Jan 2020 08:00:00 GMT; HttpOnly
+Cache-control: private, max-age=0, must-revalidate
+
+{"repositories":[{"description":"Pastebin built using Dojo for UI elements","forks":9,"open_issues":0,"homepage":"http://weierophinney.net/matthew/archives/189-Pastebin-app-and-conference-updates.html","watchers":76,"fork":false,"private":false,"name":"pastebin","owner":"weierophinney","url":"http://github.com/weierophinney/pastebin"},{"description":"Bug application built on Zend Framework, primarily as a demo app for Dutch PHP Conference","forks":2,"open_issues":0,"homepage":"http://weierophinney.net/matthew/archives/179-DPC08-Wrapup.html","watchers":34,"fork":false,"private":false,"name":"bugapp","owner":"weierophinney","url":"http://github.com/weierophinney/bugapp"},{"description":"","forks":3,"open_issues":1,"homepage":"http://weierophinney.net/phly/","watchers":40,"fork":false,"private":false,"name":"phly","owner":"weierophinney","url":"http://github.com/weierophinney/phly"}]}

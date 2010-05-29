@@ -1,0 +1,30 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="true"
+         bootstrap="bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="true"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">    
+  <testsuites>
+    <testsuite name="Zend_Service_GitHub Offline Testsuite">
+      <directory>Zend/Service/GitHub</directory>
+      <directory>Zend/Service</directory>
+    </testsuite>
+  </testsuites>
+  <groups>
+    <include>
+      <group>offline</group>
+    </include>
+  </groups>
+  <!--listeners>
+    <listener class="Recordshelf_PHPUnit_GrowlTestListener" file="/optional/path/to/MyListener.php">
+      <arguments>
+        <boolean>true</integer>
+      </arguments>
+    </listener>
+  </listeners-->
+</phpunit>

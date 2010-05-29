@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Thu, 11 Feb 2010 09:08:55 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "3538a7106dd2e21c49e7c7901be11ed0"
+X-runtime: 7ms
+Content-length: 520
+Set-cookie: _github_ses=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--884981fc5aa85daf318eeff084d98e2cff92578f; path=/; expires=Wed, 01 Jan 2020 08:00:00 GMT; HttpOnly
+Cache-control: private, max-age=0, must-revalidate
+
+{"branches":{"1.3":"818d0a8fdb762bc5cc0cf94d2582e374f3b2edb7","3.1":"35404d4c351c9317b9552fb4e5284b5ca2f699e6","2.3":"b855821a57fa9db6fafe274114f2a1fca2ab8da3","3.2":"f6a9876185a2b19ac14832264d66dfb40680bdf9","TRAC-952":"683aa1559f33b9d36b16a43b8da4f75327c37623","3.3":"d65e4bdc78a1852c130b74a2921d7fd3de57f366","3.4":"03b76f7de54b8c9e002bae6131befd5f736c6de5","3.5":"bed68e8bd52428306a6839be3089fe56a78afb75","static-mocking":"18f3a74ebab5ca7a83b2cd3f34691039d081d716","3.0":"f62571deb21a113de488d2d95fcb9019c86cd58d"}}

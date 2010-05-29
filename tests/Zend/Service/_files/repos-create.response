@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Tue, 09 Feb 2010 16:46:37 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "8a018335075635c1e9bd62d7d85137dd"
+X-runtime: 74ms
+Content-length: 169
+Cache-control: private, max-age=0, must-revalidate
+
+{"repository":{"fork":false,"forks":0,"open_issues":0,"private":false,"name":"gh_repos","watchers":1,"owner":"zfghclient","url":"http://github.com/zfghclient/gh_repos"}}

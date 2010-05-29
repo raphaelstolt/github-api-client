@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Tue, 09 Feb 2010 11:33:55 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "44cddfa467116f46fff07e3cf1cc9e36"
+X-runtime: 13ms
+Content-length: 43
+Set-cookie: _github_ses=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--884981fc5aa85daf318eeff084d98e2cff92578f; path
+=/; expires=Wed, 01 Jan 2020 08:00:00 GMT; HttpOnly
+Cache-control: private, max-age=0, must-revalidate
+
+{"emails":["raphael.stolt@googlemail.com"]}
