@@ -21,10 +21,8 @@
     </include>
   </groups>
   <!--listeners>
-    <listener class="Recordshelf_PHPUnit_GrowlTestListener" file="/optional/path/to/MyListener.php">
-      <arguments>
-        <boolean>true</integer>
-      </arguments>
+    <listener class="PHPUnit_Extensions_TestListener_GrowlTestListener" 
+              file="/Users/stolt/Work/GrowlTestListener.php">
     </listener>
   </listeners-->
 </phpunit>
