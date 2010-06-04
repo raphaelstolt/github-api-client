@@ -52,7 +52,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
     }
     /**
      * @param string $user The GitHub user (owner) of the repository.
-     * @param string $user The name of the repository to watch.
+     * @param string $repository The name of the repository to watch.
      */
     protected function _watch($user, $repository)
     {
@@ -69,7 +69,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
     }
     /**
      * @param string $user The GitHub user (owner) of the repository.
-     * @param string $user The name of the repository to unwatch.
+     * @param string $repository The name of the repository to unwatch.
      */
     protected function _unwatch($user, $repository)
     {
@@ -86,7 +86,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
     }
     /**
      * @param string $user The GitHub user (owner) of the repository.
-     * @param string $user The name of the repository to fork.
+     * @param string $repository The name of the repository to fork.
      */
     protected function _fork($user, $repository)
     {
@@ -105,7 +105,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
      * Creates a repository.
      *
      * @param string $repository The name of the repository to create.
-     * @param array $params Params to configure the repository. 
+     * @param array  $params Params to configure the repository. 
      * @throws Zend_Service_GitHub_Exception if provided Uri or public value is invalid or
      * when the repository already exists.
      */
@@ -246,6 +246,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
     }
     /**
      * Gets the tags of a given repository.
+
      *
      * @param string $user
      * @param string $repository
@@ -284,8 +285,8 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
      * Returns the public (creation) value of a repository.
      *
      * @param  integer $value
-     * @return integer $value
-     * @throws Zend_Service_GitHub_Exception if the public 
+     * @return   integer $value
+     * @throws  Zend_Service_GitHub_Exception if the public 
      * repository value is not supported. Possible values are:
      * 1 => public and 0 => private.     
      */
