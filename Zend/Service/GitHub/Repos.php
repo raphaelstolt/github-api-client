@@ -25,7 +25,7 @@ class Zend_Service_GitHub_Repos extends Zend_Service_GitHub
     const PRIVATE_REPOS_VALUE = 0;
     /**
      * @param string $user The GitHub user (owner) of the repository.
-     * @param string $user The name of a specific repository.
+     * @param string $repository The name of a specific repository.
      */
     protected function _show($user, $repository = null)
     {
