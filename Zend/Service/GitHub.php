@@ -39,6 +39,9 @@ class Zend_Service_GitHub extends Zend_Rest_Client
     const API_ENTRY_PATH = '/api/v2/json';
     const MAX_LOGIN_LENGTH = 40;
     const SERVICE_BASE_URI = 'http://github.com';
+    const SERVICE_GIST_URI = 'http://gist.github.com';
+    const API_ENTRY_PATH_GIST = '/api/v1/json';
+
     /**
      * Whether or not authorization has been initialized.
      * @var bool
@@ -90,7 +93,11 @@ class Zend_Service_GitHub extends Zend_Rest_Client
         'search',
         'label',
         'blob',
-        'tree'
+        'tree',
+        'gist'
+    );
+    protected $_schemaBreakingApiPartsAndMappings = array(
+        'gist' => self::SERVICE_GIST_URI
     );
     protected $_supportedSubApiParts = array(
         'user/key',
@@ -105,7 +112,7 @@ class Zend_Service_GitHub extends Zend_Rest_Client
      * @param  string $token
      * @throws Zend_Service_GitHub_Exception if login is invalid 
      */
-    public function __construct($login = null, $token = null)
+    public function __construct($login = null, $token = null, $setBaseUri = true)
     {
         $this->setLocalHttpClient(clone self::getHttpClient());
         if (!is_null($login)) {
@@ -114,7 +121,11 @@ class Zend_Service_GitHub extends Zend_Rest_Client
         if (!is_null($token)) {
             $this->setToken($token);
         }
-        $this->setUri(self::SERVICE_BASE_URI);
+        if ($setBaseUri === true) {
+            $this->setUri(self::SERVICE_BASE_URI);
+        } else {
+            $this->setUri($setBaseUri);
+        }
         $this->_localHttpClient->setHeaders('Accept-Charset', 'ISO-8859-1,utf-8');
     }
     /**
@@ -253,9 +264,14 @@ class Zend_Service_GitHub extends Zend_Rest_Client
             throw new Zend_Service_GitHub_Exception($exceptionMessage);
         }
         $this->_currentApiPart = $part;
+        $setBaseUri = true;         
+        if (in_array($part, array_keys($this->_schemaBreakingApiPartsAndMappings))) {
+            $setBaseUri = $this->_schemaBreakingApiPartsAndMappings[$part];
+        }
         $this->_currentApiComponent = new $proxiedApiComponent(
-            $this->getLogin(), 
-            $this->getToken()
+            $this->getLogin(),
+            $this->getToken(),
+            $setBaseUri
         );
         return $this;
     }

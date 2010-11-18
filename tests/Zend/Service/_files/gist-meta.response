@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.67
+Date: Thu, 18 Nov 2010 19:49:46 GMT
+Content-type: application/json; charset=utf-8
+Connection: close
+Status: 200 OK
+Etag: "a9ba735ee6cf5a30222863aa9f877076"
+X-runtime: 30ms
+Content-length: 174
+Cache-control: private, max-age=0, must-revalidate
+
+{"gists":[{"files":["ports.sh"],"public":true,"repo":"374130","description":"List what ports are in use on OS X","created_at":"2010/04/21 10:24:32 -0700","owner":"defunkt"}]}

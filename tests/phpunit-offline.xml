@@ -6,7 +6,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="true"
-         stopOnFailure="false"
+         stopOnFailure="true"
          syntaxCheck="true"
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
   <testsuites> 
@@ -20,14 +20,14 @@
       <group>offline</group>
     </include>
   </groups>
-  <!--listeners>
-    <listener class="PHPUnit_Extensions_TestListener_GrowlTestListener" 
+  <listeners>
+    <!--listener class="PHPUnit_Extensions_TestListener_GrowlTestListener" 
               file="/Users/stolt/Work/GrowlTestListener.php">
      <arguments>
        <string>$HOME/Pictures/pass.png</string>
        <string>$HOME/Pictures/pending.png</string>
        <string>$HOME/Pictures/fail.png</string>
      </arguments>
-    </listener>
-  </listeners-->
+    </listener-->
+  </listeners>
 </phpunit>
