@@ -41,4 +41,20 @@ class Zend_Service_GitHubOfflineTestcase extends PHPUnit_Framework_TestCase
         }
         return trim(file_get_contents($responseFile));
     }
+    /**
+     * Returns the content of stored file. 
+     *
+     * @param string $name Name of the file
+     * @return string
+     */
+    protected function _getStoredFileContent($name)
+    {
+        $file = $this->_filesPath . '/' . $name;
+        if (!file_exists($file)) {
+            $exceptionMessage = "File %s doesn't exist.";
+            $exceptionMessage = sprintf($exceptionMessage, $file);
+            throw new PHPUnit_Framework_Exception($exceptionMessage);
+        }
+        return trim(file_get_contents($file));
+    }
 }

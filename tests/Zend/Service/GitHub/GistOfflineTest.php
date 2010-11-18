@@ -28,6 +28,41 @@ class Zend_Service_GitHub_GistOfflineTest extends Zend_Service_GitHubOfflineTest
             'owner' => 'defunkt'
         );
         $response = $this->_gitHubClient->gist->meta('374130');
-        $this->assertSame($response, $gistsMeta);
-    } 
+        
+        $assertionMessage = "Response didn't return expected Gist metadata";
+        $this->assertSame($response, $gistsMeta, $assertionMessage);
+    }
+    public function testListReturnsGistOfUser()
+    {
+        $this->_injectHttpClientAdapterTest();
+        $this->_httpClientAdapterTest->setResponse(
+            $this->_getStoredResponseContent('gist-list')
+        );
+        
+        $response = $this->_gitHubClient->gist->list('raphaelstolt');
+        
+        $assertionMessage = "Gist list doesn't match expected Gist count";
+        $this->assertTrue(count($response['gists']) === 6, $assertionMessage);
+        
+        $assertionMessage = "Gist owner doesn't match expected owner";
+        foreach ($response['gists'] as $gist) {
+            $this->assertSame($gist['owner'], 'raphaelstolt', $assertionMessage);
+        }
+    }
+    public function testContentReturnsTheRawGistContent()
+    {
+        $this->_injectHttpClientAdapterTest();
+        $this->_httpClientAdapterTest->setResponse(
+            $this->_getStoredResponseContent('gist-content')
+        );
+        
+        $response = $this->_gitHubClient->gist->content('402018', 'redis-glue-test.php');
+        
+        $assertionMessage = "Gist file content isn't the same";
+        $this->assertSame(
+            $response, 
+            $this->_getStoredFileContent('redis-glue-test.php'), 
+            $assertionMessage
+        );
+    }
 }
