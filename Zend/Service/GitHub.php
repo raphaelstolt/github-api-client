@@ -217,7 +217,7 @@ class Zend_Service_GitHub extends Zend_Rest_Client
             $client->setCookieJar($this->_cookieJar);
         }
         if (!$this->_authorizationInitialized && 
-            $this->getLogin() !== null && $this->getLogin() !== null) {
+            $this->getLogin() !== null && $this->getToken() !== null) {
             $this->_authorizationInitialized = true;
             $this->_authorizationCredentials = array(
                 'login' => $this->getLogin(), 
