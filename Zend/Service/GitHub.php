@@ -360,13 +360,11 @@ class Zend_Service_GitHub extends Zend_Rest_Client
         $this->_prepare($path, $addApiEntryPath);
         $this->_localHttpClient->setParameterGet($query);
         
-        if ($this->_authorizationInitialized && $query !== null) {
-            $_query = array_merge($this->_getAuthorizationCredentials(), $query);
-            $this->_localHttpClient->setParameterGet($_query);
-        } elseif (!$this->_authorizationInitialized && $query !== null) {
-            $this->_localHttpClient->setParameterGet($query);
-        } elseif ($this->_authorizationInitialized && $query == null) {
-            $this->_localHttpClient->setParameterGet($this->_getAuthorizationCredentials());
+        if ( $this->_authorizationCredentials ) {
+            $this->_localHttpClient->setAuth(
+                $this->getLogin() . "/token", 
+                $this->getToken()
+            );
         }
         return $this->_localHttpClient->request('GET');
     }
@@ -381,15 +379,14 @@ class Zend_Service_GitHub extends Zend_Rest_Client
     protected function _post($path, $data = null)
     {
         $this->_prepare($path);
-        if ($this->_authorizationInitialized && $data !== null) {
-            $_data = array_merge($this->_getAuthorizationCredentials(), $data);
-        } elseif ($this->_authorizationInitialized && $data == null) {
-            $_data = $this->_getAuthorizationCredentials();
-        } elseif (!$this->_authorizationInitialized && $data !== null) {
-            $_data = $data;
+        if ( $this->_authorizationCredentials ) {
+            $this->_localHttpClient->setAuth(
+                $this->getLogin() . "/token", 
+                $this->getToken()
+            );
         }
-        return $this->_performPost('POST', $_data);
-    }
+        return $this->_performPost('POST', $data);
+    }    
     /**
      * Perform a POST or PUT
      *
