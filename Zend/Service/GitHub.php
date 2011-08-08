@@ -220,7 +220,7 @@ class Zend_Service_GitHub extends Zend_Rest_Client
             $this->getLogin() !== null && $this->getToken() !== null) {
             $this->_authorizationInitialized = true;
             $this->_authorizationCredentials = array(
-                'login' => $this->getLogin(), 
+                'user' => $this->getLogin(), 
                 'token' => $this->getToken()
             );
         }
